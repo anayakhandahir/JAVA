@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpages</title>
+    <style>
+     body{
+       font-size:25px;
+       background-color: dodgerblue;
+       color:azure;
+       text-align: center;
+        }
+        button{
+            border-radius: 10px;
+            background-color: lightpink;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tinu's Webpage</h1>
+    <button onclick="pick()">Pick Random Number </button>
+  <p id="result"></p>
+    <script>
+    for(let i = 1;i<=7;i++) {
+        document.body.innerHTML +=i + "&nbsp;&nbsp;";
+    }
+    function pick(){
+        let n=Math.floor(Math.random()*7+1);
+    
+    switch(n){
+        case 1: day="Monday";
+    break;
+        case 2: day="Tuesday";
+    break;
+        case 3: day="Wednesday";
+    break;
+        case 4: day="Thursday";
+    break;
+        case 5: day="Friday";
+    break;
+        case 6: day="Saturday";
+    break;
+        case 7: day="Sunday";
+    break;
+
+    }
+
+    document.getElementById("result").innerHTML= "Number:"+n+"<br>"+"Day:"+day;
+}
+
+
+</script>
+</body>
+</html>
