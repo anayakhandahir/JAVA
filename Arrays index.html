@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Call Stack</title>
+    <style>
+        body {
+            background: lavender;
+
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            text-shadow: 3px 1px 4px rgb(255, 177, 203);
+        }
+
+        #object {
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: cadetblue;
+        }
+
+        #array {
+            font-size: 25px;
+        }
+
+        #out {
+            text-align: center;
+            font-size: 25px;
+            color: lightpink;
+        }
+
+        h2 {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Object Information </h1>
+    <div id="object"></div>
+    <h1>Her favourite's colours are :</h1>
+    <div id="array"></div>
+    <h2>But she dosent's like Light pink so just remove it </h2>
+    <div id="out"></div>
+    <div id="add"></div>
+    <script>
+        var friend = {
+            name: "Aliya",
+            age: 15,
+            time: "from school.",
+            introduce() {
+                return "This is my friend "
+            }
+        };
+        document.getElementById("object").innerHTML = friend.introduce() + friend.name + " . She is " + friend.age + " years old" + "  . She is my friend   " + friend.time
+
+        var colors = [
+            " pink ", " levender ", " lightblue ", " lemon ", " brownish Red ", " lightpink "
+        ];
+        document.getElementById("out").innerHTML = colors.pop();
+        colors.push("  Navy blue  ");
+        document.getElementById("array").innerHTML = colors;
+
+
+
+    </script>
+</body>
+
+</html>
